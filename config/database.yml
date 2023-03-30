@@ -13,9 +13,9 @@ default: &default
   adapter: postgresql
   encoding: unicode
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  host: <%= ENV['INTERNAL_HOST'] || 'localhost' %>
-  username: <%= USER'] || 'oliver' %>
-  password: <%= ENV['PASSWORD'] || '' %>
+  host: <%= ENV['DATABASE_HOST'] || 'localhost' %>
+  username: <%= ENV['DATABASE_USERNAME'] || 'oliver' %>
+  password: <%= ENV['DATABASE_PASSWORD'] %>
 
 development:
   !!merge <<: *default
@@ -27,4 +27,4 @@ test:
 
 production:
   !!merge <<: *default
-  database: <%= ENV['DATABASE'] || 'rails_api_development' %>
+  database: rails_api_production
