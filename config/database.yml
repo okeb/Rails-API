@@ -50,6 +50,7 @@ test:
 #
 production:
   !!merge <<: *default
-  database: test_api_production
-  username: test_api
+  database: okeb_rails_api_production
+  username: okebcode
   password: <%= ENV["TEST_API_DATABASE_PASSWORD"] %>
+  url: <%= ENV['DATABASE_URL'] %>
