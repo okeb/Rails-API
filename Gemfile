@@ -55,3 +55,5 @@ gem 'jsonapi.rb'
 
 
 gem "pagy", "~> 6.0"
+
+gem "ransack", "~> 4.0"
