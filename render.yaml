@@ -10,7 +10,7 @@ services:
   buildCommand: "./bin/render-build.sh"
   startCommand: "bundle exec puma -C config/puma.rb"
   envVars:
-  - key: DATABASE_URL
+  - key: dpg-cgilkl7dvk4vd54bioq0-a
     fromDatabase:
       name: rails_api_production
       property: connectionString
